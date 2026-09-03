@@ -1991,6 +1991,7 @@ impl PeerConfig {
         .map(|key| {
             mp.insert(key.to_owned(), UserDefaultConfig::read(key));
         });
+        mp.insert("enable-lan-discovery".to_string(), "N".to_string());
         mp
     }
 
